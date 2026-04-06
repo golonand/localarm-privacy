@@ -54,7 +54,7 @@
             <ul>
                 <li><strong>Dane lokalizacyjne (GPS)</strong> — współrzędne geograficzne urządzenia, wykorzystywane do określenia odległości od ustawionego punktu alarmowego.</li>
                 <li><strong>Dane alarmów</strong> — nazwy, współrzędne, promień i ustawienia alarmów utworzonych przez użytkownika.</li>
-                <li><strong>Preferencje użytkownika</strong> — ustawienia aplikacji, takie jak częstotliwość odświeżania lokalizacji, wybrany dźwięk alarmu itp.</li>
+                <li><strong>Preferencje użytkownika</strong> — ustawienia aplikacji, takie jak częstotliwość odświeżania lokalizacji, tryb alarmu (dźwięk, wibracja lub oba), wyjście audio, wybrany język interfejsu itp.</li>
             </ul>
             <div class="highlight">
                 <strong>Ważne:</strong> Wszystkie dane są przechowywane wyłącznie lokalnie na urządzeniu użytkownika. Aplikacja NIE wysyła żadnych danych osobowych na zewnętrzne serwery, NIE korzysta z usług analitycznych i NIE zbiera danych w celach reklamowych.
@@ -66,7 +66,7 @@
             <p>Dane lokalizacyjne są przetwarzane wyłącznie w celu:</p>
             <ul>
                 <li>Monitorowania pozycji urządzenia względem ustawionych punktów alarmowych.</li>
-                <li>Wyzwalania alarmu dźwiękowego po wejściu w strefę alarmu.</li>
+                <li>Wyzwalania alarmu dźwiękowego i/lub wibracyjnego po wejściu w strefę alarmu.</li>
                 <li>Wyświetlania powiadomień związanych z alarmem lokalizacyjnym.</li>
             </ul>
             <p>Dane lokalizacyjne są przetwarzane w czasie rzeczywistym i nie są zapisywane w formie historii tras ani dziennika lokalizacji.</p>
@@ -113,6 +113,7 @@
                 <li><strong>Internet</strong> — wyłącznie do rozwijania skróconych linków przy udostępnianiu lokalizacji.</li>
                 <li><strong>Powiadomienia</strong> — do wyświetlania alertów o alarmie.</li>
                 <li><strong>Usługa na pierwszym planie</strong> — do ciągłego monitorowania lokalizacji.</li>
+                <li><strong>Wibracje</strong> — do wibracyjnego powiadomienia o alarmie (jeśli włączone w ustawieniach).</li>
                 <li><strong>Intencja pełnoekranowa</strong> — do wyświetlania alarmu na ekranie blokady.</li>
                 <li><strong>Uruchamianie po restarcie</strong> — do wznowienia aktywnych alarmów po restarcie urządzenia.</li>
             </ul>
@@ -132,7 +133,7 @@
 
         <div class="section">
             <h2>9. Bezpieczeństwo dzieci</h2>
-            <p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia i nie zbiera świadomie danych od dzieci. Jeśli rodzic lub opiekun uważa, że dziecko korzysta z aplikacji, powinien skontaktować się z autorem.</p>
+            <p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia i nie zbiera świadomie danych od dzieci.</p>
         </div>
 
         <div class="section">
@@ -143,12 +144,12 @@
         <div class="section">
             <h2>11. Kontakt</h2>
             <p>W sprawach dotyczących prywatności i przetwarzania danych można kontaktować się z autorem:</p>
-            <p><strong>Andrzej Golonka</strong><br>E-mail: <a href="mailto:Amalabs@o2.pl">Amalabs@o2.pl</a></p>
+            <p><strong>Andrzej Golonka</strong><br>E-mail: <a href="mailto:amalabs@o2.pl">amalabs@o2.pl</a></p>
         </div>
 
         <div class="section">
             <p><strong>Data wejścia w życie:</strong> 27 marca 2026 r.<br>
-            <strong>Ostatnia aktualizacja:</strong> 27 marca 2026 r.</p>
+            <strong>Ostatnia aktualizacja:</strong> 6 kwietnia 2026 r.</p>
         </div>
     </div>
 
@@ -167,7 +168,7 @@
             <ul>
                 <li><strong>Location data (GPS)</strong> — geographic coordinates of the device, used to determine the distance from a set alarm point.</li>
                 <li><strong>Alarm data</strong> — names, coordinates, radius, and settings of alarms created by the user.</li>
-                <li><strong>User preferences</strong> — application settings such as location refresh frequency, selected alarm sound, etc.</li>
+                <li><strong>User preferences</strong> — application settings such as location refresh frequency, alarm mode (sound, vibration, or both), audio output, selected interface language, etc.</li>
             </ul>
             <div class="highlight">
                 <strong>Important:</strong> All data is stored exclusively on the user's device. The Application does NOT send any personal data to external servers, does NOT use analytics services, and does NOT collect data for advertising purposes.
@@ -179,7 +180,7 @@
             <p>Location data is processed solely for the purpose of:</p>
             <ul>
                 <li>Monitoring the device's position relative to set alarm points.</li>
-                <li>Triggering an audio alarm upon entering the alarm zone.</li>
+                <li>Triggering an audio and/or vibration alarm upon entering the alarm zone.</li>
                 <li>Displaying notifications related to the location alarm.</li>
             </ul>
             <p>Location data is processed in real time and is not stored as a route history or location log.</p>
@@ -226,6 +227,7 @@
                 <li><strong>Internet</strong> — solely for resolving shortened links when sharing locations.</li>
                 <li><strong>Notifications</strong> — for displaying alarm alerts.</li>
                 <li><strong>Foreground service</strong> — for continuous location monitoring.</li>
+                <li><strong>Vibration</strong> — for vibration alarm notifications (if enabled in settings).</li>
                 <li><strong>Full-screen intent</strong> — for displaying the alarm on the lock screen.</li>
                 <li><strong>Boot completed</strong> — for resuming active alarms after device restart.</li>
             </ul>
@@ -245,7 +247,7 @@
 
         <div class="section">
             <h2>9. Children's Safety</h2>
-            <p>The Application is not intended for children under 13 years of age and does not knowingly collect data from children. If a parent or guardian believes their child is using the Application, they should contact the Author.</p>
+            <p>The Application is not intended for children under 13 years of age and does not knowingly collect data from children.</p>
         </div>
 
         <div class="section">
@@ -256,12 +258,12 @@
         <div class="section">
             <h2>11. Contact</h2>
             <p>For privacy and data processing inquiries, please contact:</p>
-            <p><strong>Andrzej Golonka</strong><br>Email: <a href="mailto:Amalabs@o2.pl">Amalabs@o2.pl</a></p>
+            <p><strong>Andrzej Golonka</strong><br>Email: <a href="mailto:amalabs@o2.pl">amalabs@o2.pl</a></p>
         </div>
 
         <div class="section">
             <p><strong>Effective date:</strong> March 27, 2026<br>
-            <strong>Last updated:</strong> March 27, 2026</p>
+            <strong>Last updated:</strong> April 6, 2026</p>
         </div>
     </div>
 
