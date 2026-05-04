@@ -27,13 +27,11 @@
     </style>
 </head>
 <body>
-
 <div class="container">
     <div class="header">
         <h1>LocAlarm</h1>
-        <div class="subtitle"> Polityka prywatności / Privacy Policy</div>
+        <div class="subtitle">Polityka prywatności / Privacy Policy</div>
     </div>
-
     <div class="lang-switch">
         <button id="btn-pl" class="active" onclick="switchLang('pl')">🇵🇱 Polski</button>
         <button id="btn-en" onclick="switchLang('en')">🇬🇧 English</button>
@@ -55,6 +53,7 @@
                 <li><strong>Dane lokalizacyjne (GPS)</strong> — współrzędne geograficzne urządzenia, wykorzystywane do określenia odległości od ustawionego punktu alarmowego.</li>
                 <li><strong>Dane alarmów</strong> — nazwy, współrzędne, promień i ustawienia alarmów utworzonych przez użytkownika.</li>
                 <li><strong>Preferencje użytkownika</strong> — ustawienia aplikacji, takie jak częstotliwość odświeżania lokalizacji, tryb alarmu (dźwięk, wibracja lub oba), wyjście audio, wybrany język interfejsu itp.</li>
+                <li><strong>Dziennik diagnostyczny</strong> — lokalny dziennik zdarzeń aplikacji (uruchomienie/zatrzymanie monitoringu, odczyty lokalizacji, wyzwolenie alarmu, błędy). Dziennik jest przechowywany wyłącznie na urządzeniu użytkownika i może być udostępniony na zewnątrz wyłącznie na wyraźne żądanie użytkownika (przycisk „Udostępnij dziennik diagnostyczny" w ustawieniach). Aplikacja nigdy nie wysyła dziennika automatycznie.</li>
             </ul>
             <div class="highlight">
                 <strong>Ważne:</strong> Wszystkie dane są przechowywane wyłącznie lokalnie na urządzeniu użytkownika. Aplikacja NIE wysyła żadnych danych osobowych na zewnętrzne serwery, NIE korzysta z usług analitycznych i NIE zbiera danych w celach reklamowych.
@@ -69,6 +68,7 @@
                 <li>Wyzwalania alarmu dźwiękowego i/lub wibracyjnego po wejściu w strefę alarmu.</li>
                 <li>Wyświetlania powiadomień związanych z alarmem lokalizacyjnym.</li>
             </ul>
+            <p>Dziennik diagnostyczny służy wyłącznie do rozwiązywania problemów technicznych przez użytkownika lub autora aplikacji. Nie jest wykorzystywany do żadnych innych celów.</p>
             <p>Dane lokalizacyjne są przetwarzane w czasie rzeczywistym i nie są zapisywane w formie historii tras ani dziennika lokalizacji.</p>
         </div>
 
@@ -96,12 +96,13 @@
 
         <div class="section">
             <h2>6. Przechowywanie danych</h2>
-            <p>Wszystkie dane (alarmy, preferencje) są przechowywane lokalnie na urządzeniu przy użyciu:</p>
+            <p>Wszystkie dane (alarmy, preferencje, dziennik diagnostyczny) są przechowywane lokalnie na urządzeniu przy użyciu:</p>
             <ul>
                 <li><strong>Room Database</strong> — lokalna baza danych SQLite do przechowywania alarmów.</li>
                 <li><strong>DataStore Preferences</strong> — do przechowywania ustawień aplikacji.</li>
+                <li><strong>Plik tekstowy</strong> — dziennik diagnostyczny przechowywany w pamięci wewnętrznej aplikacji (niedostępny dla innych aplikacji). Maksymalny rozmiar dziennika jest ograniczony do ok. 500 KB — starsze wpisy są automatycznie usuwane.</li>
             </ul>
-            <p>Dane są usuwane wraz z odinstalowaniem aplikacji lub mogą być usunięte ręcznie przez użytkownika w ustawieniach systemu Android (Ustawienia → Aplikacje → LocAlarm → Wyczyść dane).</p>
+            <p>Dane są usuwane wraz z odinstalowaniem aplikacji lub mogą być usunięte ręcznie przez użytkownika w ustawieniach systemu Android (Ustawienia → Aplikacje → LocAlarm → Wyczyść dane). Dziennik diagnostyczny można wyczyścić osobno przyciskiem „Wyczyść dziennik" w ustawieniach aplikacji.</p>
         </div>
 
         <div class="section">
@@ -114,6 +115,7 @@
                 <li><strong>Powiadomienia</strong> — do wyświetlania alertów o alarmie.</li>
                 <li><strong>Usługa na pierwszym planie</strong> — do ciągłego monitorowania lokalizacji.</li>
                 <li><strong>Wibracje</strong> — do wibracyjnego powiadomienia o alarmie (jeśli włączone w ustawieniach).</li>
+                <li><strong>Blokada uśpienia procesora (Wake Lock)</strong> — do utrzymania aktywnego monitoringu lokalizacji przy wyłączonym ekranie, zapobiegając usypianiu procesora przez system.</li>
                 <li><strong>Intencja pełnoekranowa</strong> — do wyświetlania alarmu na ekranie blokady.</li>
                 <li><strong>Uruchamianie po restarcie</strong> — do wznowienia aktywnych alarmów po restarcie urządzenia.</li>
             </ul>
@@ -124,6 +126,7 @@
             <p>Ponieważ wszystkie dane są przechowywane wyłącznie na urządzeniu użytkownika, użytkownik ma pełną kontrolę nad swoimi danymi. W szczególności użytkownik może:</p>
             <ul>
                 <li>Usunąć wszystkie alarmy z poziomu aplikacji.</li>
+                <li>Wyczyścić dziennik diagnostyczny przyciskiem „Wyczyść dziennik" w ustawieniach.</li>
                 <li>Wyczyścić wszystkie dane aplikacji w ustawieniach systemu Android.</li>
                 <li>Odinstalować aplikację, co spowoduje trwałe usunięcie wszystkich danych.</li>
                 <li>Cofnąć uprawnienia lokalizacyjne w dowolnym momencie w ustawieniach systemu.</li>
@@ -149,7 +152,7 @@
 
         <div class="section">
             <p><strong>Data wejścia w życie:</strong> 27 marca 2026 r.<br>
-            <strong>Ostatnia aktualizacja:</strong> 6 kwietnia 2026 r.</p>
+            <strong>Ostatnia aktualizacja:</strong> 4 maja 2026 r.</p>
         </div>
     </div>
 
@@ -169,6 +172,7 @@
                 <li><strong>Location data (GPS)</strong> — geographic coordinates of the device, used to determine the distance from a set alarm point.</li>
                 <li><strong>Alarm data</strong> — names, coordinates, radius, and settings of alarms created by the user.</li>
                 <li><strong>User preferences</strong> — application settings such as location refresh frequency, alarm mode (sound, vibration, or both), audio output, selected interface language, etc.</li>
+                <li><strong>Diagnostic log</strong> — a local event log of application operations (monitoring start/stop, location readings, alarm triggers, errors). The log is stored exclusively on the user's device and can only be shared externally at the user's explicit request (via the "Share diagnostic log" button in settings). The Application never sends the log automatically.</li>
             </ul>
             <div class="highlight">
                 <strong>Important:</strong> All data is stored exclusively on the user's device. The Application does NOT send any personal data to external servers, does NOT use analytics services, and does NOT collect data for advertising purposes.
@@ -183,6 +187,7 @@
                 <li>Triggering an audio and/or vibration alarm upon entering the alarm zone.</li>
                 <li>Displaying notifications related to the location alarm.</li>
             </ul>
+            <p>The diagnostic log is used solely for troubleshooting technical issues by the user or the application author. It is not used for any other purposes.</p>
             <p>Location data is processed in real time and is not stored as a route history or location log.</p>
         </div>
 
@@ -210,12 +215,13 @@
 
         <div class="section">
             <h2>6. Data Storage</h2>
-            <p>All data (alarms, preferences) is stored locally on the device using:</p>
+            <p>All data (alarms, preferences, diagnostic log) is stored locally on the device using:</p>
             <ul>
                 <li><strong>Room Database</strong> — a local SQLite database for storing alarms.</li>
                 <li><strong>DataStore Preferences</strong> — for storing application settings.</li>
+                <li><strong>Text file</strong> — diagnostic log stored in the application's internal storage (inaccessible to other applications). Maximum log size is limited to approximately 500 KB — older entries are automatically removed.</li>
             </ul>
-            <p>Data is deleted when the application is uninstalled or can be manually cleared by the user in Android system settings (Settings → Apps → LocAlarm → Clear data).</p>
+            <p>Data is deleted when the application is uninstalled or can be manually cleared by the user in Android system settings (Settings → Apps → LocAlarm → Clear data). The diagnostic log can be cleared separately using the "Clear log" button in app settings.</p>
         </div>
 
         <div class="section">
@@ -228,6 +234,7 @@
                 <li><strong>Notifications</strong> — for displaying alarm alerts.</li>
                 <li><strong>Foreground service</strong> — for continuous location monitoring.</li>
                 <li><strong>Vibration</strong> — for vibration alarm notifications (if enabled in settings).</li>
+                <li><strong>Wake Lock</strong> — to keep the processor active during location monitoring with screen off, preventing the system from putting the CPU to sleep.</li>
                 <li><strong>Full-screen intent</strong> — for displaying the alarm on the lock screen.</li>
                 <li><strong>Boot completed</strong> — for resuming active alarms after device restart.</li>
             </ul>
@@ -238,6 +245,7 @@
             <p>Since all data is stored exclusively on the user's device, the user has full control over their data. In particular, the user may:</p>
             <ul>
                 <li>Delete all alarms from within the application.</li>
+                <li>Clear the diagnostic log using the "Clear log" button in settings.</li>
                 <li>Clear all application data in Android system settings.</li>
                 <li>Uninstall the application, which permanently deletes all data.</li>
                 <li>Revoke location permissions at any time in system settings.</li>
@@ -263,15 +271,12 @@
 
         <div class="section">
             <p><strong>Effective date:</strong> March 27, 2026<br>
-            <strong>Last updated:</strong> April 6, 2026</p>
+            <strong>Last updated:</strong> May 4, 2026</p>
         </div>
     </div>
 
-    <div class="footer">
-        &copy; 2026 Andrzej Golonka — LocAlarm
-    </div>
+    <div class="footer">&copy; 2026 Andrzej Golonka — LocAlarm</div>
 </div>
-
 <script>
 function switchLang(lang) {
     document.getElementById('lang-pl').classList.toggle('hidden', lang !== 'pl');
@@ -280,6 +285,5 @@ function switchLang(lang) {
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 }
 </script>
-
 </body>
 </html>
