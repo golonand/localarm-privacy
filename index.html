@@ -54,6 +54,7 @@
                 <li><strong>Dane alarmów</strong> — nazwy, współrzędne, promień i ustawienia alarmów utworzonych przez użytkownika.</li>
                 <li><strong>Preferencje użytkownika</strong> — ustawienia aplikacji, takie jak częstotliwość odświeżania lokalizacji, tryb alarmu (dźwięk, wibracja lub oba), wyjście audio, wybrany język interfejsu itp.</li>
                 <li><strong>Dziennik diagnostyczny</strong> — lokalny dziennik zdarzeń aplikacji (uruchomienie/zatrzymanie monitoringu, odczyty lokalizacji, wyzwolenie alarmu, błędy). Dziennik jest przechowywany wyłącznie na urządzeniu użytkownika i może być udostępniony na zewnątrz wyłącznie na wyraźne żądanie użytkownika (przycisk „Udostępnij dziennik diagnostyczny" w ustawieniach). Aplikacja nigdy nie wysyła dziennika automatycznie.</li>
+                <li><strong>Dane licencji</strong> — data pierwszej instalacji aplikacji oraz status zakupu pełnej wersji. Dane przechowywane wyłącznie lokalnie na urządzeniu w SharedPreferences. Nie są wysyłane na żadne serwery.</li>
             </ul>
             <div class="highlight">
                 <strong>Ważne:</strong> Wszystkie dane są przechowywane wyłącznie lokalnie na urządzeniu użytkownika. Aplikacja NIE wysyła żadnych danych osobowych na zewnętrzne serwery, NIE korzysta z usług analitycznych i NIE zbiera danych w celach reklamowych.
@@ -90,6 +91,7 @@
             <ul>
                 <li><strong>Google Play Services (Location API)</strong> — do uzyskiwania dokładnej pozycji GPS. Google Play Services mogą przetwarzać dane lokalizacyjne zgodnie z <a href="https://policies.google.com/privacy" target="_blank">Polityką prywatności Google</a>.</li>
                 <li><strong>OkHttp3</strong> — klient HTTP wykorzystywany wyłącznie do rozwijania skróconych linków (np. maps.app.goo.gl) przy udostępnianiu lokalizacji z Google Maps. Żadne dane użytkownika nie są wysyłane na serwery autora.</li>
+                <li><strong>Google Play Billing</strong> — do obsługi jednorazowego zakupu pełnej wersji aplikacji. Dane płatności (karta, konto Google) przetwarzane są wyłącznie przez Google zgodnie z <a href="https://policies.google.com/privacy" target="_blank">Polityką prywatności Google</a>. Aplikacja nie ma dostępu do danych karty płatniczej ani danych rozliczeniowych użytkownika — otrzymuje jedynie informację o statusie zakupu (kupiono/nie kupiono).</li>
             </ul>
             <p>Aplikacja NIE korzysta z: Google Analytics, Firebase, Facebook SDK, reklam ani żadnych innych usług śledzących.</p>
         </div>
@@ -118,6 +120,7 @@
                 <li><strong>Blokada uśpienia procesora (Wake Lock)</strong> — do utrzymania aktywnego monitoringu lokalizacji przy wyłączonym ekranie, zapobiegając usypianiu procesora przez system.</li>
                 <li><strong>Intencja pełnoekranowa</strong> — do wyświetlania alarmu na ekranie blokady.</li>
                 <li><strong>Uruchamianie po restarcie</strong> — do wznowienia aktywnych alarmów po restarcie urządzenia.</li>
+                <li><strong>Rozliczenia w aplikacji (Billing)</strong> — do obsługi jednorazowego zakupu pełnej wersji aplikacji przez Google Play.</li>
             </ul>
         </div>
 
@@ -152,7 +155,7 @@
 
         <div class="section">
             <p><strong>Data wejścia w życie:</strong> 27 marca 2026 r.<br>
-            <strong>Ostatnia aktualizacja:</strong> 4 maja 2026 r.</p>
+            <strong>Ostatnia aktualizacja:</strong> 5 lipca 2026 r.</p>
         </div>
     </div>
 
@@ -173,6 +176,7 @@
                 <li><strong>Alarm data</strong> — names, coordinates, radius, and settings of alarms created by the user.</li>
                 <li><strong>User preferences</strong> — application settings such as location refresh frequency, alarm mode (sound, vibration, or both), audio output, selected interface language, etc.</li>
                 <li><strong>Diagnostic log</strong> — a local event log of application operations (monitoring start/stop, location readings, alarm triggers, errors). The log is stored exclusively on the user's device and can only be shared externally at the user's explicit request (via the "Share diagnostic log" button in settings). The Application never sends the log automatically.</li>
+                <li><strong>License data</strong> — first installation date and full version purchase status. Stored exclusively on the device in SharedPreferences. Not sent to any servers.</li>
             </ul>
             <div class="highlight">
                 <strong>Important:</strong> All data is stored exclusively on the user's device. The Application does NOT send any personal data to external servers, does NOT use analytics services, and does NOT collect data for advertising purposes.
@@ -209,6 +213,7 @@
             <ul>
                 <li><strong>Google Play Services (Location API)</strong> — for obtaining accurate GPS position. Google Play Services may process location data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
                 <li><strong>OkHttp3</strong> — an HTTP client used solely for resolving shortened links (e.g., maps.app.goo.gl) when sharing locations from Google Maps. No user data is sent to the Author's servers.</li>
+                <li><strong>Google Play Billing</strong> — for processing the one-time full version purchase. Payment data (card, Google account) is processed exclusively by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. The Application has no access to credit card or billing data — it only receives the purchase status (purchased/not purchased).</li>
             </ul>
             <p>The Application does NOT use: Google Analytics, Firebase, Facebook SDK, advertisements, or any other tracking services.</p>
         </div>
@@ -237,6 +242,7 @@
                 <li><strong>Wake Lock</strong> — to keep the processor active during location monitoring with screen off, preventing the system from putting the CPU to sleep.</li>
                 <li><strong>Full-screen intent</strong> — for displaying the alarm on the lock screen.</li>
                 <li><strong>Boot completed</strong> — for resuming active alarms after device restart.</li>
+                <li><strong>In-app billing (Billing)</strong> — for processing the one-time full version purchase via Google Play.</li>
             </ul>
         </div>
 
@@ -271,7 +277,7 @@
 
         <div class="section">
             <p><strong>Effective date:</strong> March 27, 2026<br>
-            <strong>Last updated:</strong> May 4, 2026</p>
+            <strong>Last updated:</strong> July 5, 2026</p>
         </div>
     </div>
 
